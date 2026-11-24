@@ -79,7 +79,10 @@ def play_game(words):
     ]
     print("Welcome to hangman!")
     while wrong_guesses < 6:
-        print("Wrong guesses left")
+        print(hangman[wrong_guesses])
+        print("word:", display_word)
+        print("Attempts left:", 6 - wrong_guesses)
+
 
         display = ""
         for letter in word:
@@ -110,11 +113,10 @@ def play_game(words):
 
         if all(letter in guessed_letters for letter in word):
             print("You won!")
-        return True, word
+            return True, word
     print(hangman[6])
-    print("Game over")
+    print("Game over!")
     print("The word was:", word)
-
     return False, word
 
 def save_result(won, word):

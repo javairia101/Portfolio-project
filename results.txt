@@ -1,3 +1,4 @@
 won: computer
 won: elephant
 won: elephant
+won: gaming
